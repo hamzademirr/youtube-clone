@@ -1,8 +1,24 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import NavBar from './Components/NavBar';
+import { SidebarProvider } from './Context/SidebarContext';
+import { ThemeProvider } from "./Context/ThemeContext";
 
 function App() {
   return (
-      <h1>Youtube</h1>
+      <ThemeProvider>
+        <SidebarProvider>
+          <Router>
+            <Routes>
+              <Route path='/' element={<NavBar />} />
+            </Routes>
+          </Router>
+        </SidebarProvider>
+      </ThemeProvider>
   )
 }
 

@@ -1,0 +1,44 @@
+.scrol-bar {
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+
+  .ant-menu {
+    &.is-sidebar {
+      background-color: #212121;
+      color: #fff;
+      .ant-menu-title-content {
+        margin-left: 24px;
+        color: white;
+      }
+
+      img {
+        border-radius: 50%;
+      }
+      
+    }
+
+    &.is-sidebar2 {
+      background-color: #212121;
+      color: #fff;
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    li{
+      border-radius: 0;
+    }
+    .ant-menu-item-group-title{
+      color: #AAA;
+      font-weight: bold;
+    }
+
+    .ant-menu-item-selected{
+      background-color: #303030;
+    }
+
+    .ant-menu-item-divider{
+      border-color: #303030;
+    }
+  }
+}
