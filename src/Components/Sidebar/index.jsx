@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Menu } from 'antd';
+import { Outlet } from 'react-router-dom';
 
 import { useSidebar } from '../../Context/SidebarContext';
+import { useTheme } from "../../Context/ThemeContext";
 
-import Home from "../../assets/Sidebar/Home.jsx";
+
+
+import HomeIcon from "../../assets/Sidebar/Home.jsx";
 import Explore from "../../assets/Sidebar/Explore.jsx";
 import Subscriptions from "../../assets/Sidebar/Subscriptions.jsx";
 import Library from "../../assets/Sidebar/Library.jsx";
@@ -30,7 +34,7 @@ function getItem(label, key, icon, children, type) {
     };
 }
 const items = [
-    getItem('Home', '1', <span><Home /></span>),
+    getItem('Home', '1', <span><HomeIcon /></span>),
     getItem('Explore', '2', <span><Explore /></span>),
     getItem('Subscriptions', '3', <span><Subscriptions /></span>),
     {
@@ -45,30 +49,35 @@ const items = [
         type: 'divider',
     },
     getItem('SUBSCRIPTIONS', 'b1', null, [
-        getItem('James Gouse', '9', <img src={userPhoto2} />), 
+        getItem('James Gouse', '9', <img src={userPhoto2} />),
         getItem('James Gouse', '10', <img src={userPhoto3} />),
         getItem('James Gouse', '11', <img src={userPhoto4} />),
         getItem('James Gouse', '12', <img src={userPhoto5} />),
         getItem('James Gouse', '13', <img src={userPhoto6} />),
         getItem('James Gouse', '14', <img src={userPhoto7} />),], 'group')
 ];
+
 function Sidebar() {
+    const { theme } = useTheme();
     const { collapsed, toggleCollapsed } = useSidebar();
     return (
-        <div className='scrol-bar'
-            style={{
-                width: collapsed ? 80 : 224,
-            }}
-        >
-            <Menu
-                className={collapsed ? 'is-sidebar2' : 'is-sidebar'}
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
-                mode="inline"
-                inlineCollapsed={collapsed}
-                items={items}
-            />
-        </div>
+        <>
+            <div className={theme ? 'dark scrol-bar' : 'light scrol-bar'}
+                style={{
+                    width: collapsed ? 80 : 224,
+                }}
+            >
+                <Menu
+                    className={collapsed ? 'is-sidebar2' : 'is-sidebar'}
+                    defaultSelectedKeys={['1']}
+                    defaultOpenKeys={['sub1']}
+                    mode="inline"
+                    inlineCollapsed={collapsed}
+                    items={items}
+                />
+            </div>
+            <Outlet />
+        </>
     );
 };
 export default Sidebar;

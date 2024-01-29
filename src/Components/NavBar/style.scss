@@ -132,7 +132,6 @@ navbar {
               span {
                 color: #fff;
               }
-
             }
           }
         }
@@ -185,16 +184,16 @@ navbar {
 
           .ant-input-group-addon {
             .ant-btn {
-              background-color: #f8f8f8;;
+              background-color: #f8f8f8;
+              ;
               border-color: #303030;
 
               span {
                 color: black;
               }
-
             }
 
-            .ant-btn:hover{
+            .ant-btn:hover {
               background-color: #f0f0f0;
             }
           }
@@ -214,16 +213,17 @@ navbar {
       .micButton {
         border: 1px solid lightgray;
         background-color: #f8f8f8;
-        path{
+
+        path {
           fill: black;
         }
       }
     }
 
     .rightItem {
-        path {
-          fill: black;
-        }
+      path {
+        fill: black;
+      }
     }
   }
 }

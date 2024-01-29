@@ -3,11 +3,39 @@
     display: flex;
     align-items: center;
     height: 45px;
-    padding-left: 4px;
-    border-top: 1px solid #303030;
-    border-bottom: 1px solid #303030;
-    button{
+
+    button {
         margin-right: 12px;
-        background-color: #303030;
+    }
+
+    &.dark {
+        background-color: #212121;
+
+        button,
+        .ant-btn-link:hover {
+            color: white;
+        }
+
+        button {
+            background-color: #303030;
+        }
+
+        border-top: 1px solid #303030;
+        border-bottom: 1px solid #303030;
+    }
+
+    &.light {
+
+        button,
+        .ant-btn-link:hover {
+            color: black;
+        }
+
+        button {
+            background-color: #f8f8f8;
+        }
+
+        border-top: 1px solid #afa9a9;
+        border-bottom: 1px solid #afa9a9;
     }
 }

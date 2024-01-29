@@ -1,0 +1,9 @@
+.item {
+    overflow-x: auto;
+    height: calc(100vh - 103px);
+    padding: 0px 16px;
+
+    &.dark {
+        background-color: #212121;
+    }
+}

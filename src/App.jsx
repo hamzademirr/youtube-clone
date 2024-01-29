@@ -7,18 +7,27 @@ import {
 import NavBar from './Components/NavBar';
 import { SidebarProvider } from './Context/SidebarContext';
 import { ThemeProvider } from "./Context/ThemeContext";
+import TopMenu from './Components/TopMenu';
+import Sidebar from './Components/Sidebar';
 
 function App() {
   return (
-      <ThemeProvider>
-        <SidebarProvider>
-          <Router>
-            <Routes>
-              <Route path='/' element={<NavBar />} />
-            </Routes>
-          </Router>
-        </SidebarProvider>
-      </ThemeProvider>
+    <ThemeProvider>
+      <SidebarProvider>
+        <Router>
+          <div>
+            <NavBar />
+            <div style={{ display: 'flex' }}>
+              <Sidebar />
+              <TopMenu />
+            </div>
+              <Routes>
+                
+              </Routes>
+          </div>
+        </Router>
+      </SidebarProvider>
+    </ThemeProvider>
   )
 }
 
