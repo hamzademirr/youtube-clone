@@ -1,0 +1,17 @@
+.ant-dropdown {
+    &.dark {
+        background-color: #303030;
+
+        ul {
+            background-color: #303030;
+
+            li {
+                span {
+                    button {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

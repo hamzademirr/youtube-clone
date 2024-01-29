@@ -1,0 +1,229 @@
+navbar {
+  display: flex;
+  justify-content: space-between;
+
+  .leftItem {
+    padding: 16px 0 16px 24px;
+    display: flex;
+
+    .Menu {
+      width: 24px;
+      height: 24px;
+    }
+
+    .youtubeLogo {
+      margin-left: 24px;
+    }
+  }
+
+  .middleItem {
+    display: flex;
+    margin-top: 8px;
+
+    .ant-input-group-wrapper {
+      &.Search-Input {
+        input {
+          height: 40px;
+          width: 360px;
+          border-right: 0;
+          border-radius: 40px 0 0 40px;
+        }
+
+        .ant-input-group-addon {
+          .ant-btn {
+            height: 40px;
+            width: 64px;
+            border-start-end-radius: 40px;
+            border-end-end-radius: 40px;
+            border-left: 0;
+            left: -4px;
+          }
+        }
+      }
+    }
+
+    input {
+      height: 34px;
+      width: 352px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 5px 0 0 5px;
+      border-right: none;
+    }
+
+    .searchButton {
+      height: 38px;
+      width: 58px;
+      border-radius: 0 5px 5px 0;
+      border-left: none;
+
+      .Search {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .micButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-left: 4px;
+      width: 44px;
+      height: 40px;
+    }
+  }
+
+  .rightItem {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+
+    div {
+      padding: 8px;
+      margin-right: 8px;
+    }
+
+    .user {
+      margin: 0;
+      padding: 0 14px;
+
+      .userPhoto {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      div {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  &.dark {
+    background-color: #212121;
+
+    .middleItem {
+
+      .ant-input-group-wrapper {
+        &.Search-Input {
+          input {
+            border-color: #303030;
+          }
+
+          input::placeholder {
+            color: #AAA;
+          }
+
+          input:hover {
+            background-color: #121212;
+          }
+
+          .ant-input-outlined {
+            background-color: #121212;
+          }
+
+          .ant-input-group-addon {
+            .ant-btn {
+              background-color: #303030;
+              border-color: #303030;
+
+              span {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      input {
+        background-color: #121212;
+        border: 1px solid gray;
+      }
+
+      .searchButton {
+        color: #303030;
+        border: 1px solid gray;
+      }
+
+      .micButton {
+        border: 1px solid gray;
+        background-color: black;
+      }
+    }
+  }
+
+  &.light {
+
+    .leftItem {
+      path {
+        fill: black;
+      }
+    }
+
+    .middleItem {
+
+      .ant-input-group-wrapper {
+        &.Search-Input {
+          input {
+            border-color: #303030;
+          }
+
+          input::placeholder {
+            color: #AAA;
+          }
+
+          input:hover {
+            background-color: transparent;
+          }
+
+          .ant-input-outlined {
+            background-color: transparent;
+          }
+
+          .ant-input-group-addon {
+            .ant-btn {
+              background-color: #f8f8f8;
+              ;
+              border-color: #303030;
+
+              span {
+                color: black;
+              }
+            }
+
+            .ant-btn:hover {
+              background-color: #f0f0f0;
+            }
+          }
+        }
+      }
+
+      input {
+        background-color: transparent;
+        border: 1px solid lightgray;
+      }
+
+      .searchButton {
+        color: #303030;
+        border: 1px solid lightgray;
+      }
+
+      .micButton {
+        border: 1px solid lightgray;
+        background-color: #f8f8f8;
+
+        path {
+          fill: black;
+        }
+      }
+    }
+
+    .rightItem {
+      path {
+        fill: black;
+      }
+    }
+  }
+}
