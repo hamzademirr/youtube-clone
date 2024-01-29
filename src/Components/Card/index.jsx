@@ -1,14 +1,21 @@
-import { Card } from 'antd';
+import { Avatar, Card } from 'antd';
 import React from 'react'
+
+import videoImage from "../../assets/Home/video-image.png";
 
 const { Meta } = Card;
 function Cart() {
     return (
         <Card
+
             hoverable
-            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+            cover={<img src={videoImage} />}
         >
-            <Meta title="Europe Street beat" description="www.instagram.com" />
+            <Meta
+                className='video-cart'
+                avatar={<Avatar src={videoImage} />}
+                title="Lorem ipsum dolor sit amet, consecte adipiscing elit."
+                description="15K Views .1 week ago" />
         </Card>
     )
 }

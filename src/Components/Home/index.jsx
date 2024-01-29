@@ -13,16 +13,44 @@ function Home() {
   return (
     <>
       <div className={theme ? 'dark item' : 'light item'}>
-        <Row gutter={[16, 16]} justify='center'>
-          <Col span={6}><Card /></Col>
-          <Col span={6}><Card /></Col>
-          <Col span={6}><Card /></Col>
-          <Col span={6}><Card /></Col>
-          <Col span={6}><Card /></Col>
-          <Col span={6}><Card /></Col>
-          <Col span={6}><Card /></Col>
-          <Col span={6}><Card /></Col>
-        </Row>
+        <div className='grid-container'>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+          <div className='grid-item'><Card /></div>
+        </div>
       </div>
     </>
   )
