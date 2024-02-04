@@ -4,11 +4,16 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import NavBar from './Components/NavBar';
-import { SidebarProvider } from './Context/SidebarContext';
-import { ThemeProvider } from "./Context/ThemeContext";
-import TopMenu from './Components/TopMenu';
-import Sidebar from './Components/Sidebar';
+import NavBar from './components/NavBar';
+import { SidebarProvider } from "./context/SidebarContext";
+import { ThemeProvider } from "./context/ThemeContext";
+import TopMenu from './components/TopMenu';
+import Sidebar from './components/Sidebar';
+import Home from './routes/Home';
+import LayoutWithOutTopMenu from "./layouts/WithOutTopMenu";
+import LayoutWithTopMenu from "./layouts/WithTopMenu";
+import Search from './routes/Search';
+import Detail from './routes/Detail';
 
 function App() {
   return (
@@ -17,13 +22,23 @@ function App() {
         <Router>
           <div>
             <NavBar />
-            <div style={{ display: 'flex' }}>
+            <div className='site-wrapper'>
               <Sidebar />
-              <TopMenu />
+              <div className='routes-wraper'>
+                <Routes>
+                  <Route path="/" element={<LayoutWithTopMenu />}>
+                    <Route index element={<Home />} />
+                    <Route path='search' element={<Search />} />
+                    {/* <Route path="about" element={<About />} />
+                    <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="*" element={<NoMatch />} /> */}
+                  </Route>
+                  <Route path="/" element={<LayoutWithOutTopMenu />}>
+                    <Route path='detail' element={<Detail />} />
+                  </Route>
+                </Routes>
+              </div>
             </div>
-              <Routes>
-                
-              </Routes>
           </div>
         </Router>
       </SidebarProvider>

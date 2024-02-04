@@ -1,0 +1,47 @@
+.top-menu {
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  padding: 12px 8px;
+  flex-grow: 1;
+
+  button {
+    margin-right: 12px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 12px !important;
+  }
+
+  .ant-btn {
+    border-radius: 8px;
+  }
+
+  &.dark {
+    background-color: #0f0f0f;
+
+    button,
+    .ant-btn-link:hover {
+      color: white;
+    }
+
+    button {
+      background-color: #303030;
+    }
+  }
+
+  &.light {
+
+    button,
+    .ant-btn-link:hover {
+      color: black;
+    }
+
+    button {
+      background-color: #f8f8f8;
+    }
+
+    border-top: 1px solid #afa9a9;
+    border-bottom: 1px solid #afa9a9;
+  }
+}

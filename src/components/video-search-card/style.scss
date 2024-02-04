@@ -1,0 +1,64 @@
+.video-search-card-template {
+  background-color: #0f0f0f;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 8px 0 8px;
+
+  .ant-card-body {
+    padding: 0;
+    display: flex;
+
+    .video-image {
+      img {
+        display: flex;
+        border-radius: 12px;
+        margin-right: 16px;
+      }
+    }
+
+    .video-info {
+      .video-title {
+
+        h3 {
+          color: white;
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 18px;
+          white-space: normal;
+          line-height: 26px;
+        }
+
+        p {
+          color: #aaa;
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      .channel-info {
+        display: flex;
+        padding: 12px 0 16px  0;
+
+        img {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+        }
+
+        span {
+          color: #aaa;
+          padding-left: 8px;
+        }
+      }
+
+      p {
+        color: #aaa;
+        font-family: "Roboto", "Arial", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+}

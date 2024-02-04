@@ -1,0 +1,10 @@
+.site-wrapper {
+  display: flex;
+  // flex-wrap: wrap;
+  .routes-wraper {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 16px;
+    background-color: #0f0f0f;
+  }
+}

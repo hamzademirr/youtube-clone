@@ -2,12 +2,11 @@ import React from 'react'
 
 function Menu() {
     return (
-        <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Group">
-                <path id="Vector" d="M18 1H0V0H18V1ZM18 6H0V7H18V6ZM18 12H0V13H18V12Z" fill="white" />
+                <path id="Vector" d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z" fill="white" />
             </g>
         </svg>
-
     )
 }
 
