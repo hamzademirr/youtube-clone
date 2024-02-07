@@ -1,0 +1,39 @@
+.video-detail-card-template {
+  background-color: #0f0f0f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding-bottom: 8px;
+
+  .ant-card-body {
+    padding: 0;
+    display: flex;
+
+    .video-image {
+      padding-right: 8px;
+
+      img {
+        border-radius: 8px;
+      }
+    }
+
+    .video-info {
+      .video-title {
+
+        h3 {
+          margin: 0 0 4px 0;
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        p {
+          color: #aaa;
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

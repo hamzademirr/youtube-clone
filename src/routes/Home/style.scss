@@ -1,0 +1,30 @@
+.item {
+  overflow-x: auto;
+  padding-top: 24px;
+
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &.dark {
+    background-color: #0f0f0f;
+
+    .ant-card {
+      background-color: #303030;
+      border-color: #303030;
+
+      .ant-card-body {
+        div {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &.light {
+    .ant-card {
+      border-color: #afa9a9;
+    }
+  }
+}

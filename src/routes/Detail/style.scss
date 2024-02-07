@@ -1,0 +1,216 @@
+.video-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px;
+  margin: 0 auto;
+
+  .video-side {
+    width: 100%;
+    padding-right: 24px;
+
+    @media (min-width: 540px) {
+      width: 57.7%;
+    }
+
+    .video-frame {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .video-info {
+      padding-top: 12px;
+
+      h1 {
+        color: #f1f1f1;
+        font-family: "Roboto", "Arial", sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 700;
+      }
+
+      .chanel {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 12px;
+
+        .chanel-info {
+          display: flex;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 12px;
+          }
+
+          .chanel-name {
+            padding-right: 24px;
+
+            h3 {
+              color: #f1f1f1;
+              font-family: "Roboto", "Arial", sans-serif;
+              font-size: 16px;
+              line-height: 22px;
+              font-weight: 500;
+            }
+
+            p {
+              color: #aaa;
+              font-family: "Roboto", "Arial", sans-serif;
+              font-size: 12px;
+              line-height: 18px;
+              font-weight: 400;
+            }
+          }
+
+          .subscribe-button {
+            border-radius: 18px;
+            font-size: 14px;
+            font-family: "Roboto", "Arial", sans-serif;
+            height: 36px;
+          }
+        }
+
+        .like-unlike-share {
+          display: flex;
+
+          .like-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #272727;
+            color: #f1f1f1;
+            border-radius: 18px 0 0 18px;
+            border: none;
+            border-right: 1px solid #525252;
+            height: 36px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: "Roboto", "Arial", sans-serif;
+          }
+
+          .dislike-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #272727;
+            border: none;
+            color: #f1f1f1;
+            border-radius: 0 18px 18px 0;
+            height: 36px;
+            width: 52px;
+          }
+
+          .share-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #272727;
+            color: #f1f1f1;
+            border: none;
+            border-radius: 18px;
+            height: 36px;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 8px;
+            font-family: "Roboto", "Arial", sans-serif;
+          }
+
+          .options-button {
+            background-color: #272727;
+            color: #f1f1f1;
+            border: none;
+            width: 36px;
+            height: 36px;
+          }
+        }
+      }
+    }
+
+    .explanation {
+      background-color: #272727;
+      border-radius: 12px;
+      margin-top: 12px;
+      padding: 12px;
+      color: white;
+
+      h3 {
+        font-family: "Roboto", "Arial", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      p {
+        font-family: "Roboto", "Arial", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+
+    .comment {
+      .comment-nav {
+        padding-bottom: 32px;
+
+        .info {
+          display: flex;
+          align-items: center;
+          padding: 24px 0;
+
+          h2 {
+            color: #f1f1f1;
+            font-family: "Roboto", "Arial", sans-serif;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+            padding-right: 32px;
+          }
+
+          button {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            color: #f1f1f1;
+            font-family: "Roboto", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            font-weight: bold;
+          }
+        }
+
+        .comment-write {
+          display: flex;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 16px;
+          }
+
+          .comment-input {
+            width: 100%;
+            color: white;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #aaa;
+            background-color: transparent;
+            padding: 0;
+            height: 25px;
+          }
+
+          input::placeholder {
+            color: #aaa;
+          }
+        }
+      }
+    }
+  }
+
+  .nex-video {
+    img {
+      width: 168px;
+      height: 94px;
+    }
+  }
+}

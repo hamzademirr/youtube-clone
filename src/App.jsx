@@ -1,34 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import NavBar from './components/NavBar';
+import { SidebarProvider } from "./context/SidebarContext";
+import { ThemeProvider } from "./context/ThemeContext";
+import TopMenu from './components/TopMenu';
+import Sidebar from './components/Sidebar';
+import Home from './routes/Home';
+import LayoutWithOutTopMenu from "./layouts/WithOutTopMenu";
+import LayoutWithTopMenu from "./layouts/WithTopMenu";
+import Search from './routes/Search';
+import Detail from './routes/Detail';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <ThemeProvider>
+      <SidebarProvider>
+        <Router>
+          <div>
+            <NavBar />
+            <div className='site-wrapper'>
+              <Sidebar />
+              <div className='routes-wraper'>
+                <Routes>
+                  <Route path="/" element={<LayoutWithTopMenu />}>
+                    <Route index element={<Home />} />
+                    <Route path='search' element={<Search />} />
+                    {/* <Route path="about" element={<About />} />
+                    <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="*" element={<NoMatch />} /> */}
+                  </Route>
+                  <Route path="/" element={<LayoutWithOutTopMenu />}>
+                    <Route path='detail' element={<Detail />} />
+                  </Route>
+                </Routes>
+              </div>
+            </div>
+          </div>
+        </Router>
+      </SidebarProvider>
+    </ThemeProvider>
   )
 }
 

@@ -1,0 +1,18 @@
+.ant-dropdown {
+  &.is-dark-theme {
+    background-color: #303030;
+    border-radius: 10px;
+
+    ul {
+      background-color: #303030;
+
+      li {
+        span {
+          .ant-btn, .ant-btn:hover{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

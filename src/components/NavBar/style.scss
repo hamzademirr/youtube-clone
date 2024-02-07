@@ -1,0 +1,191 @@
+navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  height: 56px;
+  align-items: center;
+
+  .leftItem {
+    padding: 0 0 0 8px;
+    display: flex;
+
+    .menu-button {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 24px;
+      height: 24px;
+    }
+
+    .youtubeLogo {
+      margin-left: 24px;
+    }
+  }
+
+  .middleItem {
+    display: flex;
+    align-items: center;
+
+    .search-form {
+      display: flex;
+    }
+
+    input {
+      color: hsla(0,100%,100%,0.88);
+      width: 535px;
+      border-radius: 40px 0 0 40px;
+      border-right: none !important;
+      font-family: Roboto, Noto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 7px 16px;
+      margin-left: 16px;
+    }
+
+    .Search-Button {
+      border-radius: 0 40px 40px 0;
+      padding: 1px 4px;
+      width: 60px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .micButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-left: 16px;
+      width: 44px;
+      height: 40px;
+    }
+  }
+
+  .rightItem {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+
+    div {
+      padding: 8px;
+      margin-right: 8px;
+    }
+
+    .user {
+      margin: 0;
+      padding: 0 14px;
+
+      .userPhoto {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      div {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  &.dark {
+    background-color: #0f0f0f;
+
+    .middleItem {
+      input::placeholder {
+        color: #838383;
+      }
+
+      input {
+        background-color: #121212;
+        border: 1px solid #303030;
+      }
+
+      .Search-Button {
+        border: 1px solid #303030;
+        background-color: #222;
+      }
+
+      .micButton {
+        border: 1px solid #303030;
+        background-color: #272727;
+      }
+    }
+  }
+
+  &.light {
+
+    .leftItem {
+      path {
+        fill: black;
+      }
+    }
+
+    .middleItem {
+
+      .ant-input-group-wrapper {
+        &.Search-Input {
+          input {
+            border-color: #303030;
+          }
+
+          input::placeholder {
+            color: #838383;
+          }
+
+          input:hover {
+            background-color: transparent;
+          }
+
+          .ant-input-outlined {
+            background-color: transparent;
+          }
+
+          .ant-input-group-addon {
+            .ant-btn {
+              background-color: #f8f8f8;
+              ;
+              border-color: #303030;
+
+              span {
+                color: black;
+              }
+            }
+
+            .ant-btn:hover {
+              background-color: #f0f0f0;
+            }
+          }
+        }
+      }
+
+      input {
+        background-color: transparent;
+        border: 1px solid lightgray;
+      }
+
+      .searchButton {
+        color: #303030;
+        border: 1px solid lightgray;
+      }
+
+      .micButton {
+        border: 1px solid lightgray;
+        background-color: #f8f8f8;
+
+        path {
+          fill: black;
+        }
+      }
+    }
+
+    .rightItem {
+      path {
+        fill: black;
+      }
+    }
+  }
+}
