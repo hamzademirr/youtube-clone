@@ -15,6 +15,7 @@
     .video-frame {
       width: 100%;
       border-radius: 12px;
+      aspect-ratio: 16 / 9;
     }
 
     .video-info {
@@ -31,6 +32,7 @@
       .chanel {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding-top: 12px;
 
         .chanel-info {
@@ -209,8 +211,11 @@
 
   .nex-video {
     img {
-      width: 168px;
+      max-width: 168px;
       height: 94px;
+    }
+    @media (min-width: 540px) {
+      width: 30%;
     }
   }
 }
