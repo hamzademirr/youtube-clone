@@ -18,191 +18,409 @@
       aspect-ratio: 16 / 9;
     }
 
-    .video-info {
-      padding-top: 12px;
-
-      h1 {
-        color: #f1f1f1;
-        font-family: "Roboto", "Arial", sans-serif;
-        font-size: 20px;
-        line-height: 28px;
-        font-weight: 700;
-      }
-
-      .chanel {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+    &.dark {
+      .video-info {
         padding-top: 12px;
 
-        .chanel-info {
-          display: flex;
+        h1 {
+          color: #f1f1f1;
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 20px;
+          line-height: 28px;
+          font-weight: 700;
+        }
 
-          img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 12px;
+        .chanel {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding-top: 12px;
+
+          .chanel-info {
+            display: flex;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-right: 12px;
+            }
+
+            .chanel-name {
+              padding-right: 24px;
+
+              h3 {
+                color: #f1f1f1;
+                font-family: "Roboto", "Arial", sans-serif;
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 500;
+              }
+
+              p {
+                color: #aaa;
+                font-family: "Roboto", "Arial", sans-serif;
+                font-size: 12px;
+                line-height: 18px;
+                font-weight: 400;
+              }
+            }
+
+            .subscribe-button {
+              border-radius: 18px;
+              font-size: 14px;
+              font-family: "Roboto", "Arial", sans-serif;
+              height: 36px;
+            }
           }
 
-          .chanel-name {
-            padding-right: 24px;
+          .like-unlike-share {
+            display: flex;
 
-            h3 {
+            .like-button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #272727;
+              color: #f1f1f1;
+              border-radius: 18px 0 0 18px;
+              border: none;
+              border-right: 1px solid #525252;
+              height: 36px;
+              font-size: 14px;
+              font-weight: 500;
+              font-family: "Roboto", "Arial", sans-serif;
+            }
+
+            .dislike-button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #272727;
+              border: none;
+              color: #f1f1f1;
+              border-radius: 0 18px 18px 0;
+              height: 36px;
+              width: 52px;
+            }
+
+            .share-button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #272727;
+              color: #f1f1f1;
+              border: none;
+              border-radius: 18px;
+              height: 36px;
+              font-size: 14px;
+              font-weight: 500;
+              margin: 0 8px;
+              font-family: "Roboto", "Arial", sans-serif;
+            }
+
+            .options-button {
+              background-color: #272727;
+              color: #f1f1f1;
+              border: none;
+              width: 36px;
+              height: 36px;
+            }
+          }
+        }
+      }
+
+      .explanation {
+        background-color: #272727;
+        border-radius: 12px;
+        margin-top: 12px;
+        padding: 12px;
+        color: white;
+
+        h3 {
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        p {
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+      }
+
+      .comment {
+        .comment-nav {
+          padding-bottom: 32px;
+
+          .info {
+            display: flex;
+            align-items: center;
+            padding: 24px 0;
+
+            h2 {
               color: #f1f1f1;
               font-family: "Roboto", "Arial", sans-serif;
-              font-size: 16px;
-              line-height: 22px;
-              font-weight: 500;
+              font-size: 20px;
+              line-height: 28px;
+              font-weight: 700;
+              padding-right: 32px;
             }
 
-            p {
-              color: #aaa;
+            button {
+              padding: 0;
+              display: flex;
+              align-items: center;
+              color: #f1f1f1;
               font-family: "Roboto", "Arial", sans-serif;
-              font-size: 12px;
-              line-height: 18px;
-              font-weight: 400;
+              font-size: 14px;
+              font-weight: 500;
+              font-weight: bold;
             }
           }
 
-          .subscribe-button {
-            border-radius: 18px;
-            font-size: 14px;
-            font-family: "Roboto", "Arial", sans-serif;
-            height: 36px;
-          }
-        }
-
-        .like-unlike-share {
-          display: flex;
-
-          .like-button {
+          .comment-write {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #272727;
-            color: #f1f1f1;
-            border-radius: 18px 0 0 18px;
-            border: none;
-            border-right: 1px solid #525252;
-            height: 36px;
-            font-size: 14px;
-            font-weight: 500;
-            font-family: "Roboto", "Arial", sans-serif;
-          }
 
-          .dislike-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #272727;
-            border: none;
-            color: #f1f1f1;
-            border-radius: 0 18px 18px 0;
-            height: 36px;
-            width: 52px;
-          }
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-right: 16px;
+            }
 
-          .share-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #272727;
-            color: #f1f1f1;
-            border: none;
-            border-radius: 18px;
-            height: 36px;
-            font-size: 14px;
-            font-weight: 500;
-            margin: 0 8px;
-            font-family: "Roboto", "Arial", sans-serif;
-          }
+            .comment-input {
+              width: 100%;
+              color: white;
+              border: none;
+              border-radius: 0;
+              border-bottom: 1px solid #aaa;
+              background-color: transparent;
+              padding: 0;
+              height: 25px;
+            }
 
-          .options-button {
-            background-color: #272727;
-            color: #f1f1f1;
-            border: none;
-            width: 36px;
-            height: 36px;
+            input::placeholder {
+              color: #aaa;
+            }
           }
         }
       }
     }
 
-    .explanation {
-      background-color: #272727;
-      border-radius: 12px;
-      margin-top: 12px;
-      padding: 12px;
-      color: white;
+    &.light {
+      .video-info {
+        padding-top: 12px;
 
-      h3 {
-        font-family: "Roboto", "Arial", sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-      }
-
-      p {
-        font-family: "Roboto", "Arial", sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 400;
-      }
-    }
-
-    .comment {
-      .comment-nav {
-        padding-bottom: 32px;
-
-        .info {
-          display: flex;
-          align-items: center;
-          padding: 24px 0;
-
-          h2 {
-            color: #f1f1f1;
-            font-family: "Roboto", "Arial", sans-serif;
-            font-size: 20px;
-            line-height: 28px;
-            font-weight: 700;
-            padding-right: 32px;
-          }
-
-          button {
-            padding: 0;
-            display: flex;
-            align-items: center;
-            color: #f1f1f1;
-            font-family: "Roboto", "Arial", sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            font-weight: bold;
-          }
+        h1 {
+          color: #0f0f0f;
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 20px;
+          line-height: 28px;
+          font-weight: 700;
         }
 
-        .comment-write {
+        .chanel {
           display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding-top: 12px;
 
-          img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 16px;
+          .chanel-info {
+            display: flex;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-right: 12px;
+            }
+
+            .chanel-name {
+              padding-right: 24px;
+
+              h3 {
+                color: #0f0f0f;
+                font-family: "Roboto", "Arial", sans-serif;
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 500;
+              }
+
+              p {
+                color: #606060;
+                font-family: "Roboto", "Arial", sans-serif;
+                font-size: 12px;
+                line-height: 18px;
+                font-weight: 400;
+              }
+            }
+
+            .subscribe-button {
+              background-color: #0f0f0f;
+              color: #ffffff;
+              border-radius: 18px;
+              font-size: 14px;
+              font-family: "Roboto", "Arial", sans-serif;
+              height: 36px;
+            }
           }
 
-          .comment-input {
-            width: 100%;
-            color: white;
-            border: none;
-            border-radius: 0;
-            border-bottom: 1px solid #aaa;
-            background-color: transparent;
-            padding: 0;
-            height: 25px;
+          .like-unlike-share {
+            display: flex;
+
+            .like-button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #f2f2f2;
+              color: #0f0f0f;
+              border-radius: 18px 0 0 18px;
+              border: none;
+              border-right: 1px solid #d9d9d9;
+              height: 36px;
+              font-size: 14px;
+              font-weight: 500;
+              font-family: "Roboto", "Arial", sans-serif;
+
+              path {
+                fill: black;
+              }
+            }
+
+            .dislike-button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #f2f2f2;
+              border: none;
+              color: #0f0f0f;
+              border-radius: 0 18px 18px 0;
+              height: 36px;
+              width: 52px;
+
+              path {
+                fill: black;
+              }
+            }
+
+            .share-button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #f2f2f2;
+              color: #0f0f0f;
+              border: none;
+              border-radius: 18px;
+              height: 36px;
+              font-size: 14px;
+              font-weight: 500;
+              margin: 0 8px;
+              font-family: "Roboto", "Arial", sans-serif;
+
+              path {
+                fill: black;
+              }
+            }
+
+            .options-button {
+              background-color: #f2f2f2;
+              color: #0f0f0f;
+              border: none;
+              width: 36px;
+              height: 36px;
+
+              path {
+                fill: black;
+              }
+            }
+          }
+        }
+      }
+
+      .explanation {
+        background-color: #f2f2f2;
+        border-radius: 12px;
+        margin-top: 12px;
+        padding: 12px;
+        color: white;
+
+        h3 {
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 14px;
+          line-height: 20px;
+          color: #0f0f0f;
+        }
+
+        p {
+          font-family: "Roboto", "Arial", sans-serif;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+          color: #0f0f0f;
+        }
+      }
+
+      .comment {
+        .comment-nav {
+          padding-bottom: 32px;
+
+          .info {
+            display: flex;
+            align-items: center;
+            padding: 24px 0;
+
+            h2 {
+              color: #0f0f0f;
+              font-family: "Roboto", "Arial", sans-serif;
+              font-size: 20px;
+              line-height: 28px;
+              font-weight: 700;
+              padding-right: 32px;
+            }
+
+            button {
+              padding: 0;
+              display: flex;
+              align-items: center;
+              color: #0f0f0f;
+              font-family: "Roboto", "Arial", sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              font-weight: bold;
+
+              path {
+                fill: black;
+              }
+            }
           }
 
-          input::placeholder {
-            color: #aaa;
+          .comment-write {
+            display: flex;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-right: 16px;
+            }
+
+            .comment-input {
+              width: 100%;
+              color: #0f0f0f;
+              border: none;
+              border-radius: 0;
+              border-bottom: 1px solid #e5e5e5;
+              background-color: transparent;
+              padding: 0;
+              height: 25px;
+            }
+
+            input::placeholder {
+              color: #606060;
+            }
           }
         }
       }

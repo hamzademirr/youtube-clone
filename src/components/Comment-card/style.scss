@@ -3,64 +3,139 @@
   border: none;
   padding-bottom: 16px;
 
-  .ant-card-body {
-    padding: 0;
-    display: flex;
+  &.dark {
+    .ant-card-body {
+      padding: 0;
+      display: flex;
 
-    .photo {
-      padding-right: 16px;
+      .photo {
+        padding-right: 16px;
 
-      img {
-        width: 40px;
-        height: auto;
-        border-radius: 50%;
-      }
-    }
-
-    .comment-info {
-      color: #f1f1f1;
-      font-size: 13px;
-      font-weight: 500;
-      line-height: 18px;
-
-      span {
-        color: #aaa;
-      }
-
-      p {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        white-space: pre-wrap;
-      }
-
-      .like-dislike-button {
-        display: flex;
-        align-items: center;
-        padding-top: 4px;
-
-        .like-button {
-          padding: 0;
-          border: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: transparent;
-          padding-right: 8px;
+        img {
+          width: 40px;
+          height: auto;
+          border-radius: 50%;
         }
+      }
 
-        .dislike-button {
-          padding: 0;
-          border: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: transparent;
+      .comment-info {
+        color: #f1f1f1;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 18px;
+
+        span {
+          color: #aaa;
         }
 
         p {
-          padding-left: 16px;
-          color: #f1f1f1;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          white-space: pre-wrap;
+        }
+
+        .like-dislike-button {
+          display: flex;
+          align-items: center;
+          padding-top: 4px;
+
+          .like-button {
+            padding: 0;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            padding-right: 8px;
+          }
+
+          .dislike-button {
+            padding: 0;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+          }
+
+          p {
+            padding-left: 16px;
+            color: #f1f1f1;
+          }
+        }
+      }
+    }
+  }
+
+  &.light {
+    .ant-card-body {
+      padding: 0;
+      display: flex;
+
+      .photo {
+        padding-right: 16px;
+
+        img {
+          width: 40px;
+          height: auto;
+          border-radius: 50%;
+        }
+      }
+
+      .comment-info {
+        color: #0f0f0f;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 18px;
+
+        span {
+          color: #606060;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          white-space: pre-wrap;
+        }
+
+        .like-dislike-button {
+          display: flex;
+          align-items: center;
+          padding-top: 4px;
+
+          .like-button {
+            padding: 0;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            padding-right: 8px;
+
+            path {
+              fill: black;
+            }
+          }
+
+          .dislike-button {
+            padding: 0;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+
+            path {
+              fill: black;
+            }
+          }
+
+          p {
+            padding-left: 16px;
+            color: #0f0f0f;
+          }
         }
       }
     }

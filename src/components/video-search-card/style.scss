@@ -6,6 +6,10 @@
   border-radius: 12px;
   padding: 16px 8px 0 8px;
 
+  .navlink-template{
+    display: flex;
+  }
+
   .ant-card-body {
     padding: 0;
     display: flex;

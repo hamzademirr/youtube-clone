@@ -1,13 +1,16 @@
 import { Card } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext/index.jsx";
 
 import './style.scss'
+import { NavLink } from 'react-router-dom';
 
-function VideoDetailCard() {
+function VideoDetailCard({ videoTitle }) {
   const [isLoading, setIsLoading] = useState(true);
   const [videoData, setVideoData] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams()
+  const { theme } = useTheme();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,17 +27,15 @@ function VideoDetailCard() {
     };
 
     fetchData();
-  }, []);
+  }, [searchParams]);
 
   const fetchVideoData = async () => {
-    // AIzaSyD8zNVSbzl7yEn0l3car8Fo075L6mI2hmg
-    // AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM
-    let api = 'AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM';
+    let api = 'AIzaSyCqglJ4SjrDxIyJTyqG5-P_sqsdanWh9LU';
     const http = 'https://www.googleapis.com/youtube/v3/search?';
 
     const response = await fetch(http + new URLSearchParams({
       key: api,
-      q: searchParams.get('w'),
+      q: (videoTitle.split(' ').slice(0, 5).join(' ')).replace(/[^\w\s.ğüşıöçĞÜŞİÖÇ]/g, ''),
       part: 'snippet',
       type: 'video',
       maxResults: 5,
@@ -53,17 +54,19 @@ function VideoDetailCard() {
     <>
       {isLoading && <p>Loading...</p>}
       {!isLoading && videoData.map((video, index) => (
-        <Card className='video-detail-card-template'>
-          <div className='video-image'>
-            <img src={video.snippet.thumbnails.high.url} alt={video.snippet.title} />
-          </div>
-          <div className='video-info'>
-            <div className='video-title'>
-              <h3>{video.snippet.title}</h3>
-              <p>{video.snippet.channelTitle}</p>
-              <p>{`${Math.random()}`.slice(0, 3) * 1000 + 1}K Views - {`${Math.floor(Math.random() * 7) + 1}`} days ago</p>
+        <Card className={theme ? 'video-detail-card-template dark' : 'video-detail-card-template light'}>
+          <NavLink className='navlink-template' to={`/detail?q=${video.id.videoId}`}>
+            <div className='video-image'>
+              <img src={video.snippet.thumbnails.high.url} alt={video.snippet.title} />
             </div>
-          </div>
+            <div className='video-info'>
+              <div className='video-title'>
+                <h3>{video.snippet.title}</h3>
+                <p>{video.snippet.channelTitle}</p>
+                <p>{`${Math.random()}`.slice(0, 3) * 1000 + 1}K Views - {`${Math.floor(Math.random() * 7) + 1}`} days ago</p>
+              </div>
+            </div>
+          </NavLink>
         </Card>
       ))}
     </>

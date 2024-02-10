@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import NavBar from './components/NavBar';
 import { SidebarProvider } from "./context/SidebarContext";
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import TopMenu from './components/TopMenu';
 import Sidebar from './components/Sidebar';
 import Home from './routes/Home';
@@ -16,15 +16,15 @@ import Search from './routes/Search';
 import Detail from './routes/Detail';
 
 function App() {
+  const { theme } = useTheme();
   return (
-    <ThemeProvider>
       <SidebarProvider>
         <Router>
           <div>
             <NavBar />
             <div className='site-wrapper'>
               <Sidebar />
-              <div className='routes-wraper'>
+              <div className={theme ? 'dark routes-wraper' : 'light routes-wraper'}>
                 <Routes>
                   <Route path="/" element={<LayoutWithTopMenu />}>
                     <Route index element={<Home />} />
@@ -42,7 +42,6 @@ function App() {
           </div>
         </Router>
       </SidebarProvider>
-    </ThemeProvider>
   )
 }
 

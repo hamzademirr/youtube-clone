@@ -1,5 +1,6 @@
 import { Card } from 'antd';
 import React, { useEffect, useState } from 'react';
+import { useTheme } from "../../context/ThemeContext/index.jsx";
 
 import "./style.scss";
 import { NavLink } from 'react-router-dom';
@@ -8,7 +9,7 @@ function VideoCard() {
   const [isLoading, setIsLoading] = useState(true);
   const [videoData, setVideoData] = useState([]);
   const [channelData, setChannelData] = useState([]);
-
+  const { theme } = useTheme();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,9 +31,7 @@ function VideoCard() {
   }, []);
 
   const fetchVideoData = async () => {
-    // AIzaSyD8zNVSbzl7yEn0l3car8Fo075L6mI2hmg
-    // AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM
-    let api = 'AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM';
+    let api = 'AIzaSyCqglJ4SjrDxIyJTyqG5-P_sqsdanWh9LU';
     const http = 'https://www.googleapis.com/youtube/v3/videos?';
 
     const response = await fetch(http + new URLSearchParams({
@@ -54,9 +53,7 @@ function VideoCard() {
   }
 
   const fetchChannelData = async (channelId) => {
-    // AIzaSyD8zNVSbzl7yEn0l3car8Fo075L6mI2hmg
-    // AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM
-    let api = 'AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM';
+    let api = 'AIzaSyCqglJ4SjrDxIyJTyqG5-P_sqsdanWh9LU';
     const http = 'https://www.googleapis.com/youtube/v3/channels?';
 
     const response = await fetch(http + new URLSearchParams({
@@ -77,8 +74,8 @@ function VideoCard() {
     <>
       {isLoading && <p>Loading...</p>}
       {!isLoading && videoData.map((video, index) => (
-        <Card key={video.id} className='video-card-template'>
-          <NavLink className='navlink-template' to={`/detail?q=${video.id}&w=${video.snippet.title}`}>
+        <Card key={video.id} className={theme ? 'video-card-template dark' : 'video-card-template light'}>
+          <NavLink className='navlink-template' to={`/detail?q=${video.id}`}>
             <div className='video-image'>
               <img src={video.snippet.thumbnails.high.url} alt={video.snippet.title} />
             </div>

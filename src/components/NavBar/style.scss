@@ -159,11 +159,10 @@ navbar {
           .ant-input-group-addon {
             .ant-btn {
               background-color: #f8f8f8;
-              ;
               border-color: #303030;
 
               span {
-                color: black;
+                fill: black;
               }
             }
 
@@ -177,11 +176,16 @@ navbar {
       input {
         background-color: transparent;
         border: 1px solid lightgray;
+        color: #0f0f0f;
       }
 
-      .searchButton {
+      .Search-Button {
         color: #303030;
         border: 1px solid lightgray;
+
+        path {
+          fill: black;
+        }
       }
 
       .micButton {

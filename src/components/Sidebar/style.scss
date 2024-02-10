@@ -1,5 +1,4 @@
-.scrol-bar {
-  overflow-y: auto;
+.side-bar {
 
   .ant-menu {
     padding: 12px;
@@ -13,9 +12,20 @@
       display: flex;
       align-items: center;
       border-radius: 10px;
-      width: 204px;
+      // width: 204px;
       margin: 0;
       padding: 12px;
+      span{
+        min-width: 24px;
+      }
+
+      &.ant-menu-item-selected {
+        width: auto;
+      }
+
+      &.ant-tooltip-open {
+        width: auto;
+      }
     }
 
     .ant-menu-item-group-title {
@@ -42,13 +52,12 @@
       img {
         border-radius: 50%;
       }
-
     }
 
     &.is-sidebar2 {
-
       img {
         border-radius: 50%;
+        min-width: 24px;
       }
     }
   }
@@ -108,7 +117,7 @@
       }
 
       .ant-menu-item-group-title {
-        color: #AAA;
+        color: #aaa;
       }
 
       .ant-menu-item-selected {

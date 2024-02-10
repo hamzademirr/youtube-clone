@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, NavLink } from "react-router-dom";
 import "./style.scss";
 
-import Videos from "../../components/Videos-data";
-
 function VideoSearchCard() {
   const [isLoading, setIsLoading] = useState(true);
   const [videoData, setVideoData] = useState([]);
@@ -32,16 +30,13 @@ function VideoSearchCard() {
   }, [searchParams]);
 
   const fetchVideoData = async () => {
-    // AIzaSyD8zNVSbzl7yEn0l3car8Fo075L6mI2hmg
-    // AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM
-    let api = 'AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM';
+    let api = 'AIzaSyCqglJ4SjrDxIyJTyqG5-P_sqsdanWh9LU';
     const http = 'https://www.googleapis.com/youtube/v3/search?';
 
     const response = await fetch(http + new URLSearchParams({
       key: api,
       q: searchParams.get('q'),
       part: 'snippet',
-      // videoEmbeddable: true,
       type: 'video',
       maxResults: 5,
       regionCode: 'TR',
@@ -56,9 +51,7 @@ function VideoSearchCard() {
   }
 
   const fetchChannelData = async (channelId) => {
-    // AIzaSyD8zNVSbzl7yEn0l3car8Fo075L6mI2hmg
-    // AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM
-    let api = 'AIzaSyApxmwkAcDPaMgGjP4WDqAjAy-W9Niq-SM';
+    let api = 'AIzaSyCqglJ4SjrDxIyJTyqG5-P_sqsdanWh9LU';
     const http = 'https://www.googleapis.com/youtube/v3/channels?';
 
     const response = await fetch(http + new URLSearchParams({
@@ -79,15 +72,15 @@ function VideoSearchCard() {
     <>
       {isLoading && <p>Loading...</p>}
       {!isLoading && videoData.map((video, index) => (
-        <NavLink to={`/detail?q=${video.id.videoId}&w=${video.snippet.title}`}>
-          <Card key={video.id} className='video-search-card-template'>
+        <Card key={video.id} className='video-search-card-template'>
+          <NavLink className='navlink-template' to={`/detail?q=${video.id.videoId}`}>
             <div className='video-image'>
               <img src={video.snippet.thumbnails.high.url} alt={video.snippet.title} />
             </div>
             <div className='video-info'>
               <div className='video-title'>
                 <h3>{video.snippet.title}</h3>
-                {/* <p>{video.statistics.viewCount} views - {new Date().getDate() - new Date(video.snippet.publishedAt).getDate()} days ago</p> */}
+                <p>{`${Math.random()}`.slice(0, 3) * 1000 + 1}K Views - {`${Math.floor(Math.random() * 7) + 1}`} days ago</p>
               </div>
               <div className='channel-info'>
                 {channelData[index] && (
@@ -97,9 +90,10 @@ function VideoSearchCard() {
               </div>
               <p>{video.snippet.description}</p>
             </div>
-          </Card>
-        </NavLink>
-      ))}
+          </NavLink>
+        </Card >
+      ))
+      }
     </>
   );
 }

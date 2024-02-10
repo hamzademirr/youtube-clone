@@ -1,6 +1,5 @@
 import React from 'react';
 import { Menu } from 'antd';
-import { Outlet } from 'react-router-dom';
 
 import { useSidebar } from '../../context/SidebarContext/index.jsx';
 import { useTheme } from "../../context/ThemeContext/index.jsx";
@@ -44,13 +43,13 @@ const items = [
   {
     type: 'divider',
   },
-  getItem('Abonelikler', 'b1', null, [
-    getItem('James Gouse', '9', <img src={userPhoto2} />),
-    getItem('James Gouse', '10', <img src={userPhoto3} />),
-    getItem('James Gouse', '11', <img src={userPhoto4} />),
-    getItem('James Gouse', '12', <img src={userPhoto5} />),
-    getItem('James Gouse', '13', <img src={userPhoto6} />),
-    getItem('James Gouse', '14', <img src={userPhoto7} />),], 'group')
+  getItem('Subscriptions', 'b1', null, [
+    getItem('John Doe', '9', <img src={userPhoto2} />),
+    getItem('Jane Smith', '10', <img src={userPhoto3} />),
+    getItem('Michael Johnson', '11', <img src={userPhoto4} />),
+    getItem('Emily Davis', '12', <img src={userPhoto5} />),
+    getItem('David Wilson', '13', <img src={userPhoto6} />),
+    getItem('Sarah Thompson', '14', <img src={userPhoto7} />),], 'group')
 ];
 
 function Sidebar() {
@@ -58,11 +57,10 @@ function Sidebar() {
   const { collapsed, toggleCollapsed } = useSidebar();
   return (
     <>
-      <div className={theme ? 'dark scrol-bar' : 'light scrol-bar'}>
+      <div className={theme ? 'dark side-bar' : 'light side-bar'}>
         <Menu
           className={collapsed ? 'is-sidebar2' : 'is-sidebar'}
           defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
           inlineCollapsed={collapsed}
           items={items}
         />

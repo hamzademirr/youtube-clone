@@ -1,20 +1,16 @@
-import React from 'react'
-import { Button } from 'antd'
+import React from "react";
+import { Button } from "antd";
 import { useTheme } from "../../context/ThemeContext";
-import { useSidebar } from "../../context/SidebarContext";
-import './style.scss'
-import { Outlet } from 'react-router-dom';
-import Home from "../../routes/Home"
+import "./style.scss";
 
 function TopMenu() {
   const { theme } = useTheme();
-  const { collapsed } = useSidebar();
   return (
     <>
       <div>
-        <div className={theme ? 'dark top-menu' : 'light top-menu'} >
+        <div className={theme ? "dark top-menu" : "light top-menu"}>
           <Button type="link" shape="round">
-            Tümü
+            All
           </Button>
           <Button type="link" shape="round">
             Music
@@ -26,18 +22,18 @@ function TopMenu() {
             Live
           </Button>
           <Button type="link" shape="round">
-            diziler
+            Series
           </Button>
           <Button type="link" shape="round">
-            footbal
+            Football
           </Button>
           <Button type="link" shape="round">
-            son yuklenenler
+            Latest Uploads
           </Button>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default TopMenu
+export default TopMenu;
