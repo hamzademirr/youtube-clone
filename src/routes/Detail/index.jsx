@@ -46,7 +46,7 @@ function Detail() {
   }, [searchParams]);
 
   const fetchVideoData = async () => {
-    let api = "AIzaSyCqglJ4SjrDxIyJTyqG5-P_sqsdanWh9LU";
+    let api = "";
     const http = "/api/youtube/v3/videos?";
 
     const response = await fetch(
@@ -66,7 +66,7 @@ function Detail() {
   };
 
   const fetchChannelData = async (channelId) => {
-    let api = "AIzaSyCqglJ4SjrDxIyJTyqG5-P_sqsdanWh9LU";
+    let api = "";
     const http = "/api/youtube/v3/channels?";
 
     const response = await fetch(

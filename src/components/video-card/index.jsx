@@ -31,7 +31,7 @@ function VideoCard() {
   }, []);
 
   const fetchVideoData = async () => {
-    let api = 'AIzaSyCqglJ4SjrDxIyJTyqG5-P_sqsdanWh9LU';
+    let api = '';
     const http = 'https://www.googleapis.com/youtube/v3/videos?';
 
     const response = await fetch(http + new URLSearchParams({
@@ -53,7 +53,7 @@ function VideoCard() {
   }
 
   const fetchChannelData = async (channelId) => {
-    let api = 'AIzaSyCqglJ4SjrDxIyJTyqG5-P_sqsdanWh9LU';
+    let api = '';
     const http = 'https://www.googleapis.com/youtube/v3/channels?';
 
     const response = await fetch(http + new URLSearchParams({
